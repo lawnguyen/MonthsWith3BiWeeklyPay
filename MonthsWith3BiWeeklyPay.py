@@ -17,9 +17,12 @@ def is_there_3_pay_periods(start_week, num_weeks, month, year):
         pay_count += 1
         final_week = week
         if pay_count == 3:
-            print "\n", calendar.month(year, month), "\n", month_num_to_string(month), year, "has three pay periods"
+            display_result(month, year)
         week += 2
     return final_week
+
+def display_result(month, year):
+    print "\n", calendar.month(year, month), "\n", month_num_to_string(month), year, "has three pay periods"
 
 def find_first_week_of_pay(month, day):
     for week in month:
